@@ -1,0 +1,98 @@
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Mobile welcome screen 2;
+		--web-view-id: Mobile_welcome_screen_2;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Mobile_welcome_screen_2;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#Mobile_welcome_screen_2 {
+		position: absolute;
+		width: 414px;
+		height: 736px;
+		background-color: rgba(162,177,152,1);
+		overflow: hidden;
+		--web-view-name: Mobile welcome screen 2;
+		--web-view-id: Mobile_welcome_screen_2;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	@keyframes  {
+	
+	
+	}
+	#BananaLeaf_Preview_01 {
+		opacity: 0.17;
+		position: absolute;
+		width: 412.674px;
+		height: 736px;
+		left: 19.851px;
+		top: 0px;
+		overflow: visible;
+	}
+	#ezgifcom-gif-maker_2 {
+		position: absolute;
+		width: 580px;
+		height: 435px;
+		left: -83px;
+		top: 137px;
+		overflow: visible;
+	}
+	#Freelance_Organizer {
+		left: 101px;
+		top: 552px;
+		position: absolute;
+		overflow: visible;
+		width: 214px;
+		white-space: nowrap;
+		line-height: 53px;
+		margin-top: -10px;
+		text-align: left;
+		font-family: Brush Script MT;
+		font-style: italic;
+		font-weight: normal;
+		font-size: 33px;
+		color: rgba(57,40,99,1);
+	}
+	#Component_68__1 {
+		position: absolute;
+		width: 33.376px;
+		height: 745px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Vertical_Menu {
+		position: absolute;
+		width: 33.376px;
+		height: 745px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+		--web-animation: fadein 0.3s linear;
+		--web-action-type: page;
+		--web-action-target: Mobile_menu_screen.html;
+		cursor: pointer;
+	}
+	#Rectangle_1 {
+		fill: rgba(180,200,169,1);
+	}
+	.Rectangle_1 {
+		filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.078));
+		overflow: visible;
+		position: absolute;
+		width: 78.376px;
+		height: 790px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+</style>

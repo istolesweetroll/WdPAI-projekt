@@ -1,0 +1,3089 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #A2B198 0%, #A2B198 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    text-align: center;
+}
+
+.login-container {
+    width: 100%;
+}
+
+a.wsnextboxlink1:link,a.wsnextboxlink1:visited{ display:block; width:100%; padding:1px; text-decoration:none; text-align:center; border-style:solid;
+border-width:1px;
+border-color:#b0b581;
+color:#b0b581;
+background-color: #2a323a;
+border-radius:4px;}
+a.wsnextboxlink1:hover {
+border-color:#f4f4ed;
+color:#ced1b1;
+background-color: #384d5d;}
+
+
+button {
+    background: transparent linear-gradient(180deg,#829b71 0%, #829b71 100%) 0% 0% no-repeat padding-box;
+    border-radius: 19px;
+    width: 50%;
+    border: none;
+    color: white;
+    margin: 1em;
+    line-height: 2.5em;
+}
+
+input {
+    background-color: white;
+    border: 6px solid rgb(185, 214, 174);
+    padding: 1em;
+    margin: 1em;
+    width: 50%;
+}
+
+@media only screen and (max-device-width: 420px) {
+    .container {
+        flex-direction: column;
+    }
+    * {
+        font-size: 36px;
+        
+    color: rgba(72,72,72,1);
+    }
+    .login-container,
+    .logo {
+        width: 100%;
+    }
+    form {
+        margin: auto;
+    }
+    img {
+        height: 7em;
+        margin: 2em;
+    }
+}
+
+.base-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+nav {
+    width: 20vw;
+    height: 100%;
+    background: transparent linear-gradient(180deg, #A2B198 0%, #A2B198 100%) 0% 0% no-repeat padding-box;
+}
+
+main {
+    width: 80vw;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+nav>img {
+    width: 60%;
+    margin: 2em auto;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2em;
+}
+
+li i {
+    font-size: 1.5em;
+}
+
+.button {
+    border: 1px solid #FFFFFF;
+    border-radius: 1em;
+    margin-left: 1em;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    padding: 0.2rem;
+    width: 60%;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    width: 60%;
+}    .select select {
+        font-family: 'Arial';
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 15px;
+        outline: 0;
+        border: 6px solid rgb(185, 214, 174);;
+        border-radius: 0px;
+        background: white;
+        color: #7b7b7b;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+        .select select::-ms-expand {
+            display: none;
+        }
+
+        .select select:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+.select_arrow {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0px 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+
+
+ul {
+    list-style-type: none;
+    font: normal normal normal 20px/27px Segoe UI;
+    letter-spacing: 0.72px;
+    color: #FFFFFF;
+    height: 100%;
+    width: calc(100% - 40px);
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li {
+    text-align: left;
+    color: white;
+    margin-bottom: 1em;
+}
+
+li:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    border-bottom: 1px solid gray;
+}
+
+.add-project {
+    background: #2E6CD3 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 1.5em;
+    color: white;
+    letter-spacing: 0.1em;
+    text-align: center;
+    width: 20%;
+}
+
+.add-project>i {
+    padding: 1em 1em;
+}
+
+.search-bar {
+    width: 70%;
+}
+
+.search-bar>form>input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 23px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.72px;
+    color: #A8A8A8;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mediaViewInfo {
+    --web-view-name: See project info screen;
+    --web-view-id: See_project_info_screen;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+:root {
+    --web-view-ids: See_project_info_screen;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    color: rgba(72,72,72,1);
+    border: none;
+}
+#See_project_info_screen {
+    position: absolute;
+    width: 1280px;
+    height: 800px;
+    background-color: rgba(162,177,152,1);
+    overflow: hidden;
+    --web-view-name: See project info screen;
+    --web-view-id: See_project_info_screen;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+#Component_6__1 {
+    position: absolute;
+    width: 963px;
+    height: 440px;
+    left: 159px;
+    top: 138px;
+    overflow: visible;
+}
+#RECENT_PROJECTS {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 250px;
+    white-space: nowrap;
+    line-height: 104px;
+    margin-top: -39px;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: rgba(72,72,72,1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#Path_6094 {
+    fill: rgba(222,236,215,1);
+    stroke: rgba(170,188,160,1);
+    stroke-width: 6px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Path_6094 {
+    overflow: visible;
+    position: absolute;
+    width: 963px;
+    height: 62px;
+    left: 0px;
+    top: 53px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Collabee_Private_Co {
+    left: 17px;
+    top: 80px;
+    position: absolute;
+    overflow: visible;
+    width: 212px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Thu_26_Oct {
+    left: 281px;
+    top: 76px;
+    position: absolute;
+    overflow: visible;
+    width: 122px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Christian_Matthews {
+    left: 435px;
+    top: 76px;
+    position: absolute;
+    overflow: visible;
+    width: 204px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Thu_26_Oct_fu {
+    left: 658px;
+    top: 76px;
+    position: absolute;
+    overflow: visible;
+    width: 122px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#CLIENT {
+    left: 453px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 95px;
+    white-space: nowrap;
+    line-height: 104px;
+    margin-top: -39px;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: rgba(72,72,72,1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#DUE {
+    left: 673px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 55px;
+    white-space: nowrap;
+    line-height: 104px;
+    margin-top: -39px;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: rgba(72,72,72,1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#STATS {
+    left: 791px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 79px;
+    white-space: nowrap;
+    line-height: 104px;
+    margin-top: -39px;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: rgba(72,72,72,1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#CREATED {
+    left: 282px;
+    top: 0px;
+    position: absolute;
+    overflow: visible;
+    width: 121px;
+    white-space: nowrap;
+    line-height: 104px;
+    margin-top: -39px;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    color: rgba(72,72,72,1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#Path_6095 {
+    fill: rgba(222,236,215,1);
+    stroke: rgba(170,188,160,1);
+    stroke-width: 6px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Path_6095 {
+    overflow: visible;
+    position: absolute;
+    width: 963px;
+    height: 62px;
+    left: 0px;
+    top: 158.127px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Wed_25_Oct {
+    left: 281px;
+    top: 167px;
+    position: absolute;
+    overflow: visible;
+    width: 131px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Arthur_Cook {
+    left: 447px;
+    top: 167px;
+    position: absolute;
+    overflow: visible;
+    width: 130px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Thu_26_Oct_f {
+    left: 658px;
+    top: 167px;
+    position: absolute;
+    overflow: visible;
+    width: 122px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Path_6096 {
+    fill: rgba(222,236,215,1);
+    stroke: rgba(170,188,160,1);
+    stroke-width: 6px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Path_6096 {
+    overflow: visible;
+    position: absolute;
+    width: 963px;
+    height: 62px;
+    left: 0px;
+    top: 250.265px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Target {
+    left: 17px;
+    top: 261px;
+    position: absolute;
+    overflow: visible;
+    width: 66px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Tue_24_Oct {
+    left: 282px;
+    top: 258px;
+    position: absolute;
+    overflow: visible;
+    width: 121px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Evelyn_Tucker {
+    left: 445px;
+    top: 258px;
+    position: absolute;
+    overflow: visible;
+    width: 145px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Thu_26_Oct_ga {
+    left: 658px;
+    top: 258px;
+    position: absolute;
+    overflow: visible;
+    width: 122px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Cambr_Card {
+    left: 17px;
+    top: 170px;
+    position: absolute;
+    overflow: visible;
+    width: 127px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Path_6097 {
+    fill: rgba(222,236,215,1);
+    stroke: rgba(170,188,160,1);
+    stroke-width: 6px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Path_6097 {
+    overflow: visible;
+    position: absolute;
+    width: 963px;
+    height: 62px;
+    left: 0px;
+    top: 350px;
+    transform: matrix(1,0,0,1,0,0);
+}
+#Rectangle_652 {
+    opacity: 0.116;
+    fill: rgba(255,156,70,1);
+    stroke: rgba(168,185,157,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_652 {
+    position: absolute;
+    overflow: visible;
+    width: 118px;
+    height: 32px;
+    left: 791px;
+    top: 83px;
+}
+#Rectangle_653 {
+    opacity: 0.082;
+    fill: rgba(98,128,255,1);
+    stroke: rgba(168,185,157,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_653 {
+    position: absolute;
+    overflow: visible;
+    width: 70px;
+    height: 32px;
+    left: 791px;
+    top: 174px;
+}
+#Rectangle_654 {
+    opacity: 0.116;
+    fill: rgba(255,156,70,1);
+    stroke: rgba(168,185,157,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_654 {
+    position: absolute;
+    overflow: visible;
+    width: 118px;
+    height: 32px;
+    left: 791px;
+    top: 264px;
+}
+#IN_PROGRESS {
+    left: 807px;
+    top: 79px;
+    position: absolute;
+    overflow: visible;
+    width: 128px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(255,156,70,1);
+}
+#COMPLETED {
+    left: 808px;
+    top: 169px;
+    position: absolute;
+    overflow: visible;
+    width: 117px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(98,128,255,1);
+}
+#IN_PROGRESS_gf {
+    left: 807px;
+    top: 260px;
+    position: absolute;
+    overflow: visible;
+    width: 128px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(255,156,70,1);
+}
+#Mon_23_Oct {
+    left: 281px;
+    top: 360px;
+    position: absolute;
+    overflow: visible;
+    width: 132px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Donald_Curtis {
+    left: 445px;
+    top: 360px;
+    position: absolute;
+    overflow: visible;
+    width: 145px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Thu_26_Oct_gi {
+    left: 658px;
+    top: 360px;
+    position: absolute;
+    overflow: visible;
+    width: 122px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Gramma_Limited {
+    left: 17px;
+    top: 360px;
+    position: absolute;
+    overflow: visible;
+    width: 177px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    color: rgba(0,0,0,1);
+}
+#Rectangle_655 {
+    opacity: 0.082;
+    fill: rgba(98,128,255,1);
+    stroke: rgba(168,185,157,1);
+    stroke-width: 1px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+}
+.Rectangle_655 {
+    position: absolute;
+    overflow: visible;
+    width: 70px;
+    height: 32px;
+    left: 791px;
+    top: 365px;
+}
+#COMPLETED_gl {
+    left: 808px;
+    top: 362px;
+    position: absolute;
+    overflow: visible;
+    width: 117px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    color: rgba(98,128,255,1);
+}
+#SEE_ALL_PROJECTS {
+    left: 0px;
+    top: 410px;
+    position: absolute;
+    overflow: visible;
+    width: 212px;
+    white-space: nowrap;
+    line-height: 104px;
+    margin-top: -41px;
+    text-align: left;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    color: rgba(72,72,72,1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+label {
+    display: block;
+   
+}
+
+	.mediaViewInfo {
+		--web-view-name: New entry screen;
+		--web-view-id: New_entry_screen;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: New_entry_screen;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#New_entry_screen {
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		background-color: rgba(162,177,152,1);
+		overflow: hidden;
+		--web-view-name: New entry screen;
+		--web-view-id: New_entry_screen;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#Rectangle_705 {
+		fill: rgba(162,177,152,1);
+	}
+	.Rectangle_705 {
+		position: absolute;
+		overflow: visible;
+		width: 1280px;
+		height: 800px;
+		left: 0px;
+		top: 0px;
+	}
+	#Dashboard_BG {
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		left: 15.387px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Rectangle_10 {
+		fill: rgba(255,237,197,1);
+	}
+	.Rectangle_10 {
+		width: 246.814px;
+		height: 244.516px;
+		position: absolute;
+		overflow: visible;
+		transform: matrix(1,0,0,1,151.3673,13.737) rotate(-19deg);
+		transform-origin: center;
+	}
+	#ADD_ENTRY_MANUALLY {
+		transform: matrix(1,0,0,1,172.6276,72.5562) rotate(-19deg);
+		transform-origin: center;
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 207px;
+		white-space: nowrap;
+		line-height: 76px;
+		margin-top: -21px;
+		text-align: center;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: lighter;
+		font-size: 34px;
+		color: rgba(58,36,63,1);
+	}
+	#Ellipse_1 {
+		opacity: 0.28;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(112,112,112,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Ellipse_1 {
+		position: absolute;
+		overflow: visible;
+		width: 270.973px;
+		height: 272.619px;
+		left: 876.387px;
+		top: 45.69px;
+	}
+	#Scroll_Group_1 {
+		mix-blend-mode: normal;
+		position: absolute;
+		width: 218px;
+		height: 34px;
+		left: 904.373px;
+		top: 202px;
+		overflow: hidden;
+	}
+	#START__TIMER {
+		left: 12.627px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 194px;
+		white-space: nowrap;
+		line-height: 63px;
+		margin-top: -17.5px;
+		text-align: right;
+		font-family: Montserrat;
+		font-style: normal;
+		font-weight: lighter;
+		font-size: 28px;
+		color: rgba(58,36,63,1);
+	}
+
+	.Rectangle_652_gx {
+		position: absolute;
+		overflow: visible;
+		width: 118px;
+		height: 32px;
+		left: 791px;
+		top: 30px;
+	}
+	#Rectangle_653_gy {
+		opacity: 0.082;
+		fill: rgba(98,128,255,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.mediaViewInfo {
+		--web-view-name: See project info screen;
+		--web-view-id: See_project_info_screen;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: See_project_info_screen;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#See_project_info_screen {
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		background-color: rgba(162,177,152,1);
+		overflow: hidden;
+		--web-view-name: See project info screen;
+		--web-view-id: See_project_info_screen;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#come-back-later {
+		opacity: 0.61;
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Component_6__1 {
+		position: absolute;
+		width: 963px;
+		height: 412px;
+		left: 159px;
+		top: 138px;
+		overflow: visible;
+	}
+	#RECENT_PROJECTS {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 250px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#Path_6094 {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6094 {
+		overflow: visible;
+		position: absolute;
+		width: 963px;
+		height: 62px;
+		left: 0px;
+		top: 53px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Collabee_Private_Co {
+		left: 17px;
+		top: 69px;
+		position: absolute;
+		overflow: visible;
+		width: 212px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct {
+		left: 281px;
+		top: 76px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Christian_Matthews {
+		left: 435px;
+		top: 76px;
+		position: absolute;
+		overflow: visible;
+		width: 204px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_fu {
+		left: 658px;
+		top: 76px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#CLIENT {
+		left: 453px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 95px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#DUE {
+		left: 673px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 55px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#STATS {
+		left: 791px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 79px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#CREATED {
+		left: 282px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 121px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#Path_6095 {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6095 {
+		overflow: visible;
+		position: absolute;
+		width: 963px;
+		height: 62px;
+		left: 0px;
+		top: 158.127px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Wed_25_Oct {
+		left: 281px;
+		top: 167px;
+		position: absolute;
+		overflow: visible;
+		width: 131px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Arthur_Cook {
+		left: 447px;
+		top: 167px;
+		position: absolute;
+		overflow: visible;
+		width: 130px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_f {
+		left: 658px;
+		top: 167px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Path_6096 {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6096 {
+		overflow: visible;
+		position: absolute;
+		width: 963px;
+		height: 62px;
+		left: 0px;
+		top: 250.265px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Target {
+		left: 17px;
+		top: 261px;
+		position: absolute;
+		overflow: visible;
+		width: 66px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Tue_24_Oct {
+		left: 282px;
+		top: 258px;
+		position: absolute;
+		overflow: visible;
+		width: 121px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Evelyn_Tucker {
+		left: 445px;
+		top: 258px;
+		position: absolute;
+		overflow: visible;
+		width: 145px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_ga {
+		left: 658px;
+		top: 258px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Cambr_Card {
+		left: 17px;
+		top: 170px;
+		position: absolute;
+		overflow: visible;
+		width: 127px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Path_6097 {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6097 {
+		overflow: visible;
+		position: absolute;
+		width: 963px;
+		height: 62px;
+		left: 0px;
+		top: 350px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Rectangle_652 {
+		opacity: 0.116;
+		fill: rgba(255,156,70,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_652 {
+		position: absolute;
+		overflow: visible;
+		width: 118px;
+		height: 32px;
+		left: 791px;
+		top: 83px;
+	}
+	#Rectangle_653 {
+		opacity: 0.082;
+		fill: rgba(98,128,255,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_653 {
+		position: absolute;
+		overflow: visible;
+		width: 70px;
+		height: 32px;
+		left: 791px;
+		top: 174px;
+	}
+	#Rectangle_654 {
+		opacity: 0.116;
+		fill: rgba(255,156,70,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_654 {
+		position: absolute;
+		overflow: visible;
+		width: 118px;
+		height: 32px;
+		left: 791px;
+		top: 264px;
+	}
+	#IN_PROGRESS {
+		left: 807px;
+		top: 79px;
+		position: absolute;
+		overflow: visible;
+		width: 128px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 21px;
+		color: rgba(255,156,70,1);
+	}
+	#COMPLETED {
+		left: 808px;
+		top: 169px;
+		position: absolute;
+		overflow: visible;
+		width: 117px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 21px;
+		color: rgba(98,128,255,1);
+	}
+	#IN_PROGRESS_gf {
+		left: 807px;
+		top: 260px;
+		position: absolute;
+		overflow: visible;
+		width: 128px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 21px;
+		color: rgba(255,156,70,1);
+	}
+	#Mon_23_Oct {
+		left: 281px;
+		top: 360px;
+		position: absolute;
+		overflow: visible;
+		width: 132px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Donald_Curtis {
+		left: 445px;
+		top: 360px;
+		position: absolute;
+		overflow: visible;
+		width: 145px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_gi {
+		left: 658px;
+		top: 360px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Gramma_Limited {
+		left: 17px;
+		top: 360px;
+		position: absolute;
+		overflow: visible;
+		width: 177px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Rectangle_655 {
+		opacity: 0.082;
+		fill: rgba(98,128,255,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_655 {
+		position: absolute;
+		overflow: visible;
+		width: 70px;
+		height: 32px;
+		left: 791px;
+		top: 365px;
+	}
+	#COMPLETED_gl {
+		left: 808px;
+		top: 362px;
+		position: absolute;
+		overflow: visible;
+		width: 117px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 21px;
+		color: rgba(98,128,255,1);
+	}
+	#Component_6__20 {
+		position: absolute;
+		width: 963px;
+		height: 344px;
+		left: 159px;
+		top: 589px;
+		overflow: visible;
+	}
+	#Path_6094_gn {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6094_gn {
+		overflow: visible;
+		position: absolute;
+		width: 963px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Collabee_Private_Co_go {
+		left: 17px;
+		top: 15px;
+		position: absolute;
+		overflow: visible;
+		width: 212px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_gp {
+		left: 281px;
+		top: 23px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Christian_Matthews_gq {
+		left: 435px;
+		top: 23px;
+		position: absolute;
+		overflow: visible;
+		width: 204px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_gr {
+		left: 658px;
+		top: 23px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Path_6095_gs {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6095_gs {
+		overflow: visible;
+		position: absolute;
+		width: 963px;
+		height: 62px;
+		left: 0px;
+		top: 105.127px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Wed_25_Oct_gt {
+		left: 281px;
+		top: 114px;
+		position: absolute;
+		overflow: visible;
+		width: 131px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Arthur_Cook_gu {
+		left: 447px;
+		top: 114px;
+		position: absolute;
+		overflow: visible;
+		width: 130px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_gv {
+		left: 658px;
+		top: 114px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Cambr_Card_gw {
+		left: 17px;
+		top: 117px;
+		position: absolute;
+		overflow: visible;
+		width: 127px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Rectangle_652_gx {
+		opacity: 0.116;
+		fill: rgba(255,156,70,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_652_gx {
+		position: absolute;
+		overflow: visible;
+		width: 118px;
+		height: 32px;
+		left: 791px;
+		top: 30px;
+	}
+	#Rectangle_653_gy {
+		opacity: 0.082;
+		fill: rgba(98,128,255,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_653_gy {
+		position: absolute;
+		overflow: visible;
+		width: 70px;
+		height: 32px;
+		left: 791px;
+		top: 121px;
+	}
+	#Rectangle_654_gz {
+		opacity: 0.116;
+		fill: rgba(255,156,70,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_654_gz {
+		position: absolute;
+		overflow: visible;
+		width: 118px;
+		height: 32px;
+		left: 791px;
+		top: 211px;
+	}
+	#IN_PROGRESS_g {
+		left: 807px;
+		top: 26px;
+		position: absolute;
+		overflow: visible;
+		width: 128px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 21px;
+		color: rgba(255,156,70,1);
+	}
+	#COMPLETED_g {
+		left: 808px;
+		top: 116px;
+		position: absolute;
+		overflow: visible;
+		width: 117px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 21px;
+		color: rgba(98,128,255,1);
+	}
+	#Rectangle_655_g {
+		opacity: 0.082;
+		fill: rgba(98,128,255,1);
+		stroke: rgba(168,185,157,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Rectangle_655_g {
+		position: absolute;
+		overflow: visible;
+		width: 70px;
+		height: 32px;
+		left: 791px;
+		top: 312px;
+	}
+	#SEE_LESS {
+		left: 0px;
+		top: 167px;
+		position: absolute;
+		overflow: visible;
+		width: 101px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -41px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+    .control {
+        font-family: arial;
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 5px;
+        padding-top: 3px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+        .control input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+    .control_indicator {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #e6e6e6;
+        border: 0px solid #000000;
+        border-radius: 0px;
+    }
+    .control:hover input ~ .control_indicator,
+    .control input:focus ~ .control_indicator {
+        background: #cccccc;
+    }
+    
+    .control input:checked ~ .control_indicator {
+        background: #2aa1c0;
+    }
+    .control:hover input:not([disabled]):checked ~ .control_indicator,
+    .control input:checked:focus ~ .control_indicator {
+        background: #0e6647;
+    }
+    .control input:disabled ~ .control_indicator {
+        background: #e6e6e6;
+        opacity: 0.6;
+        pointer-events: none;
+    }
+    .control_indicator:after {
+        box-sizing: unset;
+        content: '';
+        position: absolute;
+        display: none;
+    }
+    .control input:checked ~ .control_indicator:after {
+        display: block;
+    }
+    .control-checkbox .control_indicator:after {
+        left: 8px;
+        top: 4px;
+        width: 3px;
+        height: 8px;
+        border: solid #ffffff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    .control-checkbox input:disabled ~ .control_indicator:after {
+        border-color: #7b7b7b;
+    }
+    .control-checkbox .control_indicator::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-left: -1.3rem;
+        margin-top: -1.3rem;
+        background: #2aa1c0;
+        border-radius: 3rem;
+        opacity: 0.6;
+        z-index: 99999;
+        transform: scale(0);
+    }
+    @keyframes s-ripple {
+        0% {
+            transform: scale(0);
+        }
+        20% {
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+    @keyframes s-ripple-dup {
+       0% {
+           transform: scale(0);
+        }
+       30% {
+            transform: scale(1);
+        }
+        60% {
+            transform: scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+    .control-checkbox input + .control_indicator::before {
+        animation: s-ripple 250ms ease-out;
+    }
+    .control-checkbox input:checked + .control_indicator::before {
+        animation-name: s-ripple-dup;
+    }
+
+	.mediaViewInfo {
+		--web-view-name: See project info screen;
+		--web-view-id: See_project_info_screen;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: See_project_info_screen;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#See_project_info_screen {
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		background-color: rgba(162,177,152,1);
+		overflow: hidden;
+		--web-view-name: See project info screen;
+		--web-view-id: See_project_info_screen;
+		--web-scale-on-resize: true;
+		--web-enable-deep-linking: true;
+	}
+	#come-back-later {
+		opacity: 0.61;
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		left: 0px;
+		top: 5px;
+		overflow: visible;
+	}
+	#Component_86 {
+		position: absolute;
+		width: 1171px;
+		height: 470px;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 32px;
+		overflow: visible;
+	}
+	#entry {
+		left: 69px;
+		top: 107px;
+		position: absolute;
+		overflow: visible;
+		width: 87px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#DESCRIPTION {
+		left: 313px;
+		top: 107px;
+		position: absolute;
+		overflow: visible;
+		width: 185px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#LENGTH {
+		left: 819px;
+		top: 107px;
+		position: absolute;
+		overflow: visible;
+		width: 108px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#OPTIONS {
+		left: 993px;
+		top: 107px;
+		position: absolute;
+		overflow: visible;
+		width: 124px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#CREATED {
+		left: 580px;
+		top: 107px;
+		position: absolute;
+		overflow: visible;
+		width: 121px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#SEE_ALL_PROJECT_ENTRIES_go {
+		left: 87px;
+		top: 440px;
+		position: absolute;
+		overflow: visible;
+		width: 303px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -41px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#Component_48__6 {
+		position: absolute;
+		width: 1102px;
+		height: 62px;
+		left: 69px;
+		top: 368.031px;
+		overflow: visible;
+	}
+	#Path_6094 {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6094 {
+		overflow: visible;
+		position: absolute;
+		width: 1102px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Entry_1 {
+		left: 17px;
+		top: 12px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct {
+		left: 521.002px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Made_general_sketch {
+		left: 260.316px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 221px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#ID004500 {
+		left: 757.805px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Component_48__5 {
+		position: absolute;
+		width: 1102px;
+		height: 62px;
+		left: 69px;
+		top: 296.023px;
+		overflow: visible;
+	}
+	#Path_6094_f {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6094_f {
+		overflow: visible;
+		position: absolute;
+		width: 1102px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Entry_1_f {
+		left: 17px;
+		top: 12px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_f {
+		left: 521.002px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Made_general_sketch_f {
+		left: 260.316px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 221px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#ID004500_f {
+		left: 757.805px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Component_48__4 {
+		position: absolute;
+		width: 1102px;
+		height: 62px;
+		left: 69px;
+		top: 224.016px;
+		overflow: visible;
+	}
+	#Path_6094_ga {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6094_ga {
+		overflow: visible;
+		position: absolute;
+		width: 1102px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Entry_1_ga {
+		left: 17px;
+		top: 12px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_ga {
+		left: 521.002px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Made_general_sketch_gb {
+		left: 260.316px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 221px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#ID004500_gc {
+		left: 757.805px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Component_48__3 {
+		position: absolute;
+		width: 1102px;
+		height: 262.722px;
+		left: 69px;
+		top: 152px;
+		overflow: visible;
+	}
+	#Path_6094_ge {
+		fill: rgba(222,236,215,1);
+		stroke: rgba(170,188,160,1);
+		stroke-width: 6px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Path_6094_ge {
+		overflow: visible;
+		position: absolute;
+		width: 1102px;
+		height: 62px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Entry_1_gf {
+		left: 17px;
+		top: 12px;
+		position: absolute;
+		overflow: visible;
+		width: 74px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Thu_26_Oct_gg {
+		left: 521px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 122px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Made_general_sketch_gh {
+		left: 260px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 221px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#ID004500_gi {
+		left: 758px;
+		top: 10px;
+		position: absolute;
+		overflow: visible;
+		width: 89px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 24px;
+		color: rgba(0,0,0,1);
+	}
+	#Icon_material-expand-more {
+		fill: rgba(170,188,160,1);
+	}
+	.Icon_material-expand-more {
+		overflow: visible;
+		position: absolute;
+		width: 54.193px;
+		height: 26.558px;
+		left: 963px;
+		top: 17.721px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Icon_material-expand-more_gk {
+		fill: rgba(170,188,160,1);
+	}
+	.Icon_material-expand-more_gk {
+		overflow: visible;
+		position: absolute;
+		width: 54.193px;
+		height: 26.558px;
+		left: 963px;
+		top: 89.442px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Icon_material-expand-more_gl {
+		fill: rgba(170,188,160,1);
+	}
+	.Icon_material-expand-more_gl {
+		overflow: visible;
+		position: absolute;
+		width: 54.193px;
+		height: 26.558px;
+		left: 963px;
+		top: 164.442px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Icon_material-expand-more_gm {
+		fill: rgba(170,188,160,1);
+	}
+	.Icon_material-expand-more_gm {
+		overflow: visible;
+		position: absolute;
+		width: 54.193px;
+		height: 26.558px;
+		left: 963px;
+		top: 236.164px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Cat_portrait_for_Lindsay_smith {
+		left: 0px;
+		top: 0px;
+		position: absolute;
+		overflow: visible;
+		width: 498px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -39px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 26px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#SEE_ALL_PROJECT_ENTRIES_go {
+		left: 87px;
+		top: 440px;
+		position: absolute;
+		overflow: visible;
+		width: 303px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -41px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+	#TOTAL_TIME_SPENT_031522 {
+		left: 531px;
+		top: 472px;
+		position: absolute;
+		overflow: visible;
+		width: 332px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -41px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+    
+    .custom-file-input::-webkit-file-upload-button {
+        visibility: hidden;
+      }
+      .custom-file-input::before {
+        content: 'Profile picture';
+
+      }
+
+
+	  .mediaViewInfo {
+		  --web-view-name: See project info screen;
+		  --web-view-id: See_project_info_screen;
+		  --web-scale-on-resize: true;
+		  --web-enable-deep-linking: true;
+	  }
+	  :root {
+		  --web-view-ids: See_project_info_screen;
+	  }
+	  * {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		  border: none;
+	  }
+	  #See_project_info_screen {
+		  position: absolute;
+		  width: 1280px;
+		  height: 800px;
+		  background-color: rgba(162,177,152,1);
+		  overflow: hidden;
+		  --web-view-name: See project info screen;
+		  --web-view-id: See_project_info_screen;
+		  --web-scale-on-resize: true;
+		  --web-enable-deep-linking: true;
+	  }
+
+	  #come-back-later {
+		  opacity: 0.61;
+		  position: absolute;
+		  width: 1280px;
+		  height: 800px;
+		  left: 0px;
+		  top: 5px;
+		  overflow: visible;
+	  }
+	  #TOTAL_TIME_SPENT_031522 {
+		  left: 655px;
+		  top: 496px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 332px;
+		  white-space: nowrap;
+		  line-height: 104px;
+		  margin-top: -41px;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 22px;
+		  color: rgba(72,72,72,1);
+		  letter-spacing: 1px;
+		  text-transform: uppercase;
+	  }
+	  #Component_6__2 {
+		  position: absolute;
+		  width: 1118px;
+		  height: 337px;
+		  left: 96px;
+		  top: 138px;
+		  overflow: visible;
+	  }
+	  #RECENT_PROJECTS {
+		  left: 0px;
+		  top: 0px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 250px;
+		  white-space: nowrap;
+		  line-height: 104px;
+		  margin-top: -39px;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 26px;
+		  color: rgba(72,72,72,1);
+		  letter-spacing: 1px;
+		  text-transform: uppercase;
+	  }
+	  #Path_6094 {
+		  fill: rgba(222,236,215,1);
+		  stroke: rgba(170,188,160,1);
+		  stroke-width: 6px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Path_6094 {
+		  overflow: visible;
+		  position: absolute;
+		  width: 1118px;
+		  height: 62px;
+		  left: 0px;
+		  top: 53px;
+		  transform: matrix(1,0,0,1,0,0);
+		  --web-animation: fadein undefineds undefined;
+		  --web-action-type: page;
+		  --web-action-target: See_project_info_screen___2.html;
+		  cursor: pointer;
+	  }
+	  #Collabee_Private_Co {
+		  left: 17px;
+		  top: 65px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 212px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Thu_26_Oct {
+		  left: 334px;
+		  top: 63px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 122px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Christian_Matthews {
+		  left: 523px;
+		  top: 63px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 204px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Thu_26_Oct_fv {
+		left: 779px;
+		top: 63px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 122px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #CLIENT {
+		  left: 533px;
+		  top: 0px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 95px;
+		  white-space: nowrap;
+		  line-height: 104px;
+		  margin-top: -39px;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 26px;
+		  color: rgba(72,72,72,1);
+		  letter-spacing: 1px;
+		  text-transform: uppercase;
+	  }
+	  #DUE {
+		  left: 787px;
+		  top: 0px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 55px;
+		  white-space: nowrap;
+		  line-height: 104px;
+		  margin-top: -39px;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 26px;
+		  color: rgba(72,72,72,1);
+		  letter-spacing: 1px;
+		  text-transform: uppercase;
+	  }
+	  #STATS {
+		  left: 946px;
+		  top: 0px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 79px;
+		  white-space: nowrap;
+		  line-height: 104px;
+		  margin-top: -39px;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 26px;
+		  color: rgba(72,72,72,1);
+		  letter-spacing: 1px;
+		  text-transform: uppercase;
+	  }
+	  #CREATED {
+		  left: 334px;
+		  top: 0px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 121px;
+		  white-space: nowrap;
+		  line-height: 104px;
+		  margin-top: -39px;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 26px;
+		  color: rgba(72,72,72,1);
+		  letter-spacing: 1px;
+		  text-transform: uppercase;
+	  }
+	  #Path_6095 {
+		  fill: rgba(222,236,215,1);
+		  stroke: rgba(170,188,160,1);
+		  stroke-width: 6px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Path_6095 {
+		  overflow: visible;
+		  position: absolute;
+		  width: 1118px;
+		  height: 62px;
+		  left: 0px;
+		  top: 127px;
+		  transform: matrix(1,0,0,1,0,0);
+		  --web-animation: fadein undefineds undefined;
+		  --web-action-type: page;
+		  --web-action-target: See_project_info_screen___2.html;
+		  cursor: pointer;
+	  }
+	  #Wed_25_Oct {
+		  left: 333px;
+		  top: 137px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 131px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Arthur_Cook {
+		  left: 531px;
+		  top: 137px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 130px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Thu_26_Oct_f {
+		  left: 779px;
+		  top: 137px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 122px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Path_6096 {
+		  fill: rgba(222,236,215,1);
+		  stroke: rgba(170,188,160,1);
+		  stroke-width: 6px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Path_6096 {
+		  overflow: visible;
+		  position: absolute;
+		  width: 1118px;
+		  height: 62px;
+		  left: 0px;
+		  top: 201px;
+		  transform: matrix(1,0,0,1,0,0);
+		  --web-animation: fadein undefineds undefined;
+		  --web-action-type: page;
+		  --web-action-target: See_project_info_screen___2.html;
+		  cursor: pointer;
+	  }
+	  #Target {
+		  left: 17px;
+		  top: 213px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 66px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Tue_24_Oct {
+		  left: 334px;
+		  top: 211px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 121px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Evelyn_Tucker {
+		  left: 529px;
+		  top: 211px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 145px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Thu_26_Oct_ga {
+		  left: 779px;
+		  top: 211px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 122px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Cambr_Card {
+		  left: 17px;
+		  top: 139px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 127px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Path_6097 {
+		  fill: rgba(222,236,215,1);
+		  stroke: rgba(170,188,160,1);
+		  stroke-width: 6px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Path_6097 {
+		  overflow: visible;
+		  position: absolute;
+		  width: 1118px;
+		  height: 62px;
+		  left: 0px;
+		  top: 275px;
+		  transform: matrix(1,0,0,1,0,0);
+		  --web-animation: fadein undefineds undefined;
+		  --web-action-type: page;
+		  --web-action-target: See_project_info_screen___2.html;
+		  cursor: pointer;
+	  }
+	  #Rectangle_652 {
+		  opacity: 0.116;
+		  fill: rgba(255,156,70,1);
+		  stroke: rgba(168,185,157,1);
+		  stroke-width: 1px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Rectangle_652 {
+		  position: absolute;
+		  overflow: visible;
+		  width: 118px;
+		  height: 32px;
+		  left: 946px;
+		  top: 68px;
+	  }
+	  #Rectangle_653 {
+		  opacity: 0.082;
+		  fill: rgba(98,128,255,1);
+		  stroke: rgba(168,185,157,1);
+		  stroke-width: 1px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Rectangle_653 {
+		  position: absolute;
+		  overflow: visible;
+		  width: 70px;
+		  height: 32px;
+		  left: 946px;
+		  top: 142px;
+	  }
+	  #Rectangle_654 {
+		  opacity: 0.116;
+		  fill: rgba(255,156,70,1);
+		  stroke: rgba(168,185,157,1);
+		  stroke-width: 1px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Rectangle_654 {
+		  position: absolute;
+		  overflow: visible;
+		  width: 118px;
+		  height: 32px;
+		  left: 946px;
+		  top: 216px;
+	  }
+	  #IN_PROGRESS {
+		  left: 962px;
+		  top: 65px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 128px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 21px;
+		  color: rgba(255,156,70,1);
+	  }
+	  #COMPLETED {
+		  left: 963px;
+		  top: 139px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 117px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 21px;
+		  color: rgba(98,128,255,1);
+	  }
+	  #IN_PROGRESS_gg {
+		  left: 962px;
+		  top: 213px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 128px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 21px;
+		  color: rgba(255,156,70,1);
+	  }
+	  #Mon_23_Oct {
+		  left: 333px;
+		  top: 285px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 132px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Donald_Curtis {
+		  left: 529px;
+		  top: 285px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 145px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Thu_26_Oct_gj {
+		  left: 779px;
+		  top: 285px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 122px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Gramma_Limited {
+		  left: 17px;
+		  top: 285px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 177px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 24px;
+		  color: rgba(0,0,0,1);
+	  }
+	  #Rectangle_655 {
+		  opacity: 0.082;
+		  fill: rgba(98,128,255,1);
+		  stroke: rgba(168,185,157,1);
+		  stroke-width: 1px;
+		  stroke-linejoin: miter;
+		  stroke-linecap: butt;
+		  stroke-miterlimit: 4;
+		  shape-rendering: auto;
+	  }
+	  .Rectangle_655 {
+		  position: absolute;
+		  overflow: visible;
+		  width: 70px;
+		  height: 32px;
+		  left: 946px;
+		  top: 290px;
+	  }
+	  #COMPLETED_gm {
+		  left: 963px;
+		  top: 287px;
+		  position: absolute;
+		  overflow: visible;
+		  width: 117px;
+		  white-space: nowrap;
+		  text-align: left;
+		  font-family: Avenir;
+		  font-style: normal;
+		  font-weight: normal;
+		  font-size: 21px;
+		  color: rgba(98,128,255,1);
+	  }
+	
+	  p {
+		left: 850px;
+		top: 15px;
+		position: absolute;
+		overflow: visible;
+		width: 97px;
+		white-space: nowrap;
+		line-height: 104px;
+		margin-top: -41px;
+		text-align: left;
+		font-family: Avenir;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(72,72,72,1);
+		letter-spacing: 1px;
+	  }
+
+	  
