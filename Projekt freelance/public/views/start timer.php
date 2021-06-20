@@ -43,24 +43,26 @@
             <form class="login" action="timer">>
                 <div id="demoFont"></div>
                 <div class="select">
-                    <select name="project">
-                        <option value="">Which project do you want to work on?</option>
+                    <select id="project" name="project">
+                        <option value="Which project do you want to work on?">Which project do you want to work on?</option>
                         <?php
                         asort($wcr);
                         reset($wcr);
                         foreach($wcr as $p => $w):
-                            echo '<option value="'.$p.'">'.$w.'</option>';
+                            echo '<option value="'.$w.'">'.$w.'</option>';
                         endforeach;
-                        $currentProject =  $_POST['project'];
-                        setcookie('currentProject', $currentProject, time() + (86400/2), "/"); // 86400 = 1 day
 
                         ?>
+
                     </select>
-    <div class="select_arrow">
+
+                    <input name="description" type="text" placeholder="provide short description of your entry">
+
+                    <div class="select_arrow">
     </div>
 
                 <button>START TIMER</button>
-            
+
             </form>
         </div>
     </div>

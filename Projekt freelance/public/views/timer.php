@@ -51,46 +51,47 @@
 </style>
 
 <body>
-
+<input type="hidden" name="timeTotal" >;
 <div id="timer" onclick="toggleControls()"></div>
 
 <div id="control">
 
     <button onclick="setTimer()">Set timer</button>
     <button onclick="resetTimer()">Reset</button>
-    
-<form action ="main">
-    <button onclick="toggleControls()">Save entry</button>
-</form>
+    <a href="saveEntry"><button onclick="save()">Save entry</button></a>
 </div>
 <script>
 
-    var endTime = (+localStorage.endTime || 0)
+
+    $endTime = (+localStorage.endTime || 0)
+
     function setTimer() {
-        var duration = +prompt('How long to set the timer (minutes)', '15')
-        endTime = localStorage.endTime = duration * 60e3 + Date.now()
+        $duration = +prompt('How long to set the timer (minutes)', '15')
+        $endTime = localStorage.endTime = $duration * 60e3 + Date.now()
         update()
     }
     function resetTimer() {
-        endTime = 0
+        $endTime = 0
+    }
+    function save(){
+
     }
     function toggleControls() {
-        document.body.classList.toggle('controls-hidden')
+      //  document.body.classList.toggle('controls-hidden');
+
     }
 
     function update() {
-        var timeLeft = endTime - Date.now()
-        var totalTime = endTime - timeLeft;
-        if (timeLeft < 0) {
+        $timeLeft = ($endTime-Date.now()); // Difference in time
+
+        if ($timeLeft < 0) {
             setText('--:--')
         } else {
-            var minutes = Math.floor(timeLeft / 60e3)
-            var seconds = Math.floor(timeLeft / 1e3) % 60
-
-            setText(`${minutes}:${seconds.toString(10).padStart(2, '0')}`)
-
-        }
-
+            $minutes = Math.floor($timeLeft / 60e3);
+            $seconds = Math.floor($timeLeft / 1e3) % 60;
+            document.cookie = "timeTotal" + "=" + ($duration- $minutes - 1) + ";"
+            setText(`${$minutes}:${$seconds.toString(10).padStart(2, '0')}`)
+              }
     }
 
     function setText(text) {
@@ -100,6 +101,12 @@
     setInterval(update, 200)
 
 </script>
+
+
+<?php
+setcookie("projectName",$_GET["project"], time()+3600);  /* expire in 1 hour */
+setcookie("projectDescription",$_GET["description"] , time()+3600);  /* expire in 1 hour */
+?>
 <form action ="main">
 <button id="back" >↺</button>
 </form>

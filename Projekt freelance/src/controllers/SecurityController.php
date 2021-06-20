@@ -2,17 +2,19 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/User.php';
+require_once __DIR__ .'/../models/Entry.php';
 require_once __DIR__ .'/../models/Project.php';
 require_once __DIR__.'/../repository/UserRepository.php';
 require_once __DIR__.'/../repository/ProjectRepository.php';
-class SecurityController extends AppController {
+
+class SecurityController extends AppController
+{
     public function login()
     {
 
         $userRepository = new UserRepository();
         $username = $_POST['username'];
         $password = $_POST['password'];
-
         $user = $userRepository->getUser($username);
 
         if (!$user) {
@@ -32,6 +34,7 @@ class SecurityController extends AppController {
         header("Location: {$url}/main");
 
     }
+
     public function register()
     {
         $userRepository = new UserRepository();
@@ -44,11 +47,13 @@ class SecurityController extends AppController {
             return $this->render('signup', ['messages' => ['Please provide proper password']]);
         }
         $branch = 'Other';
-        $user = new User($email, md5($password),  $username, $branch);
+        $user = new User($email, md5($password), $username, $branch);
         $userRepository->addUser($user);
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrered!']]);
     }
-    public function addnewproject(){
+
+    public function addnewproject()
+    {
         $projectRepository = new ProjectRepository();
 
         $projecttitle = $_POST['projecttitle'];
@@ -66,6 +71,19 @@ class SecurityController extends AppController {
         return $this->render('main', ['messages' => ['Project created!']]);
 
     }
-    public function addNewEntry(){}
+
+    public function saveEntry(){
+        $projectRepository = new ProjectRepository();
+        $project_id = $projectRepository -> getProjectId($_COOKIE['projectName']);
+        $entryDate = date('Y-m-d H:i:s');
+        $entryLength= intval($_COOKIE['timeTotal'], 10);
+        $entryDescription = $_COOKIE['projectDescription'];
+
+        $entry = new Entry($project_id, $entryDate, $entryLength, $entryDescription);
+        $projectRepository->addEntry($entry);
+        return $this->render('main', ['messages' => ['Entry added successfully!']]);
+
+
+    }
 
 }

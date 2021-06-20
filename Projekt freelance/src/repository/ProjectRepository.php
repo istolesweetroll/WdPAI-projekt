@@ -104,4 +104,34 @@ WHERE projects.user_id = :user_id;
         return $userprojects;
 
     }
+    public function addEntry(Entry $entry)
+    {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO  entries(project_id, entry_date, entry_length, entry_description)
+            VALUES (?, ?, ?, ?)
+        ');
+
+        $stmt->execute([
+            $entry->getProjectId(),
+            $entry->getEntryDate(),
+            $entry->getEntryLength(),
+            $entry->getEntryDescription()
+        ]);}
+
+    public function getProjectId(string $projectName): int {
+
+        $stmt = $this->database->connect()->prepare('
+SELECT projects_id 
+FROM projects
+WHERE projecttitle = :projectTitle;
+
+        ');
+        $stmt->bindParam(':projectTitle', $projectName, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $project_id= $stmt->fetch(PDO::FETCH_ASSOC);
+        $project_id = (int) $project_id['projects_id'];
+        return $project_id;
+
+    }
 }

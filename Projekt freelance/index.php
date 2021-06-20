@@ -14,6 +14,7 @@ Router::get('accountsettings', 'DefaultController');
 Router::get('deleteproject', 'DefaultController');
 Router::get('newproject', 'DefaultController');
 Router::post('addnewproject', 'SecurityController');
+Router::post('saveEntry', 'SecurityController');
 Router::get('newentry', 'DefaultController');
 Router::get('projectentries', 'DefaultController');
 Router::get('addentrymanually', 'DefaultController');

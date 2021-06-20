@@ -12,7 +12,7 @@
             <img src="public/img/holding plant.svg">
         </div>
         <div class="login-container">
-            <form class="login" action="login" method="post">
+
 
                 <div class="messages">
 
@@ -23,7 +23,9 @@
                         }
                     }
                     ?>
+
                 </div>
+            <form class="login" action="login" method="post">
                 <input name="username" type="text" required="required" placeholder="username">
                 <input name="password" type="password" required="required" placeholder="password">
                 <button type = "submit" >LOG IN</button>

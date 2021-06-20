@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <head>
+    <div class="messages">
+        <?php
+        if(isset($messages)){
+            foreach($messages as $message) {
+                echo $message;
+            }
+        }
+        ?>
+    </div>
     <link rel="stylesheet" type="text/css" href="public/css/style2.css">
     <title>SIGN UP</title>
 </head>
