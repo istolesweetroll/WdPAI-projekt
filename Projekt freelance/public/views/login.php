@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style2.css">
-    <title>LOG IN</title>
+    <title>FREELANCE</title>
 </head>
 
 <body>

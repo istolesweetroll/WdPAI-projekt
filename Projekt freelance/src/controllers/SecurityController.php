@@ -16,7 +16,7 @@ class SecurityController extends AppController
         $username = $_POST['username'];
         $password = $_POST['password'];
         $user = $userRepository->getUser($username);
-
+        $url = "http://$_SERVER[HTTP_HOST]";
         if (!$user) {
             return $this->render('login', ['messages' => ['User not found!']]);
         }
@@ -28,10 +28,30 @@ class SecurityController extends AppController
         if ($user->getPassword() !== md5($password)) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
+        if($user->getIsAdmin() == true){
+            header("Location: {$url}/admin");
 
+        }
         $url = "http://$_SERVER[HTTP_HOST]";
         setcookie('username', $username, time() + (86400 * 30), "/"); // 86400 = 1 day
-        header("Location: {$url}/main");
+
+       if($user -> getIsAdmin() == false) {
+           header("Location: {$url}/main");
+       }
+    }
+    public function logOut()
+    {
+        if (isset($_SERVER['HTTP_COOKIE'])) {
+            $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+            foreach($cookies as $cookie) {
+                $parts = explode('=', $cookie);
+                $name = trim($parts[0]);
+                setcookie($name, '', time()-1000);
+                setcookie($name, '', time()-1000, '/');
+            }
+        }
+        $url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/");
 
     }
 
@@ -47,7 +67,7 @@ class SecurityController extends AppController
             return $this->render('signup', ['messages' => ['Please provide proper password']]);
         }
         $branch = 'Other';
-        $user = new User($email, md5($password), $username, $branch);
+        $user = new User($email, md5($password), $username, $branch, false);
         $userRepository->addUser($user);
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrered!']]);
     }
@@ -82,8 +102,38 @@ class SecurityController extends AppController
         $entry = new Entry($project_id, $entryDate, $entryLength, $entryDescription);
         $projectRepository->addEntry($entry);
         return $this->render('main', ['messages' => ['Entry added successfully!']]);
-
+    }
+    public function deleteProject(){
+        $projectRepository = new ProjectRepository();
+        $projectTitle = $_POST["project"];
+        $projectRepository->deleteProject($projectTitle);
+        return $this->render('main', ['messages' => ['Project deleted successfully!']]);
 
     }
+    public function addEntryManually(){
+        $projectRepository = new ProjectRepository();
+        $project_id = $projectRepository -> getProjectId($_POST['project']);
+        $entryDate = date('Y-m-d', $_POST['entry-time']);
+        $time = explode(':', $_POST['appt']);
+        $entryLength = (int)(((int)$time[0] . '.' . $time[1])*60);
+        $entryDescription = $_POST['entry-description'];
+        $entry= new Entry($project_id, $entryDate,  $entryLength, $entryDescription);
+        $projectRepository->addEntry($entry);
+        return $this->render('main', ['messages' => ['Entry added successfully!']]);
 
+    }
+    public function editProject(){
+        $projectRepository = new ProjectRepository();
+        $project_id = $projectRepository -> getProjectId($_POST['project']);
+        setcookie("project_id",$project_id);
+        return $this->render('edit project2', ['messages' => []]);
+
+    }
+    public function saveEditChanges(){
+        $projectRepository = new ProjectRepository();
+        $project_id = $projectRepository -> getProjectId($_POST['project']);
+        setcookie("project_id",$project_id);
+        return $this->render('edit project2', ['messages' => []]);
+
+    }
 }

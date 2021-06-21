@@ -5,11 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <link rel="stylesheet" type="text/css" href="public/css/style2.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>See project info screen</title>
+<title>FREELANCE</title>
 
 </script>
 </head>
 <body>
+<?php
+require_once "messages.php";
+messages();
+
+?>
 <div id="See_project_info_screen">
 	<img id="come-back-later" src="../img/come-back-later.png" srcset="../img/come-back-later.png 1x, come-back-later@2x.png 2x">
 		

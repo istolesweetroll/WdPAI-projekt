@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style2.css">
-    <title>EDIT ACCOUNT INFO</title>
+    <title>FREELANCE</title>
 </head>
-<style type="text/css">
-#back {
-    display: block;
-    width: 3%;
-    position: absolute;
-}
-#back:hover {
- border: none;
 
- background: orange;
- box-shadow: 0px 0px 1px #777;
-}
-</style>
 <body>
+<?php
+require_once "messages.php";
+messages();
+?>
 <form action ="main">
-<button id="back" >↺</button>
+    <button id="back" style = "display: block; width: 3%; position: absolute;" >↺</button>
+
 </form>
     <div class="container">
         <div class="logo">
@@ -30,10 +23,10 @@
             
             <form class="new project">
                 
-                <input name="username" type="text" placeholder="change username">
-                <input name="email" type="email" placeholder="change email">
-                <input name="password" type="password" placeholder="change password">
-                <input name="password" type="password" placeholder="repeat changed password">
+                <input name="username" required="required" type="text" placeholder="change username">
+                <input name="email" required="required"  type="email" placeholder="change email">
+                <input name="password" required="required"  type="password" placeholder="change password">
+                <input name="password" required="required"  type="password" placeholder="repeat changed password">
                 <div id="demoFont"></div>
                 <div class="select">
     <select>

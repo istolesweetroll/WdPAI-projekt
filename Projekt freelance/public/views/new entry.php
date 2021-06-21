@@ -4,25 +4,18 @@
 <head>
 
     <link rel="stylesheet" type="text/css" href="public/css/style2.css">
-    <title>NEW ENTRY</title>
+    <title>FREELANCE</title>
 </head>
-<style type="text/css">
-#back {
-    display: block;
-    width: 3%;
-    position: absolute;
-}
-#back:hover {
- border: none;
 
- background: orange;
- box-shadow: 0px 0px 1px #777;
-}
-</style>
 <body>
+<?php
+require_once "messages.php";
+messages();
+
+?>
 <form action ="main">
-<button id="back" >↺</button>
-</form>
+    <button id="back" style = "display: block; width: 3%; position: absolute;" >↺</button>
+ </form>
     <div class="container">
 
         <div class="logo">

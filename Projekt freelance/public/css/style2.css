@@ -49,8 +49,19 @@ button {
 
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #fff;
+    font: 18px Cousine, Menlo, Monaco, monospace;
+      background-size: cover;
+    flex-direction: column;
+    text-align: center;
+}
 
-   
 input {
     background-color: white;
     border: 6px solid rgb(185, 214, 174);
@@ -137,7 +148,7 @@ li i {
     color: #FFFFFF;
     padding: 0.2rem;
     width: 60%;
-	
+
 }
 .select {
     position: relative;
@@ -2612,6 +2623,18 @@ label {
 		  --web-action-type: page;
 		  cursor: pointer;
 	  }
+
+#back {
+    display: block;
+    width: 3%;
+    position: absolute;
+}
+#back:hover {
+    border: none;
+
+    background: orange;
+    box-shadow: 0px 0px 1px #777;
+}
 	  #Wed_25_Oct {
 		  left: 333px;
 		  top: 137px;
@@ -3082,5 +3105,12 @@ label {
 		font-size: 20px;
 		text-decoration: none;
 		border: none;
-	   
+
+}
+.text {
+    left: 0;
+    top: 0;
+    margin: 0;
+    background: transparent linear-gradient(180deg, #A2B198 0%, #A2B198 100%) 0% 0% no-repeat padding-box;
+
 }
