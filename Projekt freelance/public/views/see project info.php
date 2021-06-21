@@ -5,25 +5,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<link rel="stylesheet" type="text/css" href="public/css/style2.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SEE PROJECT INFO</title>
+	<title>FREELANCE</title>
 	
 </script>
 </head>
-<style type="text/css">
-#back {
-	top: 0px;
-    display: block;
-    width: 3%;
-    position: absolute;
-}
-#back:hover {
- border: none;
 
- background: orange;
- box-shadow: 0px 0px 1px #777;
-}
-</style>
 <body>
+<?php
+require_once "messages.php";
+messages();
+
+?>
 
 	<div class="container">
 <div id="See_project_info_screen">

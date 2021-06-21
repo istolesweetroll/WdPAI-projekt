@@ -6,9 +6,16 @@ $path = trim($_SERVER['REQUEST_URI'], '/');
 $path = parse_url( $path, PHP_URL_PATH);
 
 Router::get('', 'DefaultController');
+Router::get('admin', 'DefaultController');
 Router::post('login', 'SecurityController');
+Router::post('editProject', 'SecurityController');
+Router::post('logOut', 'SecurityController');
 Router::get('main', 'DefaultController');
+Router::get('about', 'DefaultController');
+Router::get('feedback', 'DefaultController');
 Router::get('signup', 'DefaultController');
+Router::post('deleteProject', 'SecurityController');
+Router::post('addEntryManually', 'SecurityController');
 Router::post('register', 'SecurityController');
 Router::get('accountsettings', 'DefaultController');
 Router::get('deleteproject', 'DefaultController');

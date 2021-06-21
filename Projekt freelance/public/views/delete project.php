@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style2.css">
-    <title>DELETE PROJECT</title>
+    <title>FREELANCE</title>
 </head>
-<style type="text/css">
-#back {
-    display: block;
-    width: 3%;
-    position: absolute;
-}
-#back:hover {
- border: none;
-
- background: orange;
- box-shadow: 0px 0px 1px #777;
-}
-</style>
 <body>
+<button id="back" style = "display: block; width: 3%; position: absolute;" >↺</button>
+<?php
+
+require_once "messages.php";
+messages();
+
+require_once 'src/repository/ProjectRepository.php';
+$projectRepository = new ProjectRepository($_COOKIE['username']);
+$wcr= $projectRepository ->getAllUserProjects($_COOKIE['username']);
+?>
 <form action ="main">
-<button id="back" >↺</button>
+    <button id="back" style = "display: block; width: 3%; position: absolute;" >↺</button>
 </form>
+
     <div class="container">
         <div class="logo">
             <img src="public/img/planting a tree.svg">
         </div>
         <div class="login-container">
-            <form class="login">
+            <form action = "deleteProject" method = "post">
                 <div id="demoFont"></div>
                 <div class="select">
-    <select>
-        <option>Which project do you want to delete?</option>
-        <option>Cat portrait for Lindsay Elise</option>
-        <option>Tree in watercolor for Gary Green</option>
+                    <select id="project" name="project">
+                        <option value="Which project do you want to delete?">Which project do you want to delete?</option>
+                        <?php
+                        asort($wcr);
+                        reset($wcr);
+                        foreach($wcr as $p => $w):
+                            echo '<option value="'.$w.'">'.$w.'</option>';
+                        endforeach;
 
-        
-    </select>
- 
-  
-    <label class="control control-checkbox">
-        <input type="checkbox" />Also delete the project from past projects database
-
-        <div class="control_indicator"></div>
-    </label>
-                <button>DELETE PROJECT</button>
+                        ?>
+                    </select>
+                    <button type = "submit">DELETE PROJECT</button>
 
             </form>
         </div>

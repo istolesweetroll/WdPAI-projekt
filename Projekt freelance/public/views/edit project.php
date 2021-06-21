@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style2.css">
-    <title>NEW PROJECT</title>
+    <title>FREELANCE</title>
 </head>
-<style type="text/css">
-#back {
-    display: block;
-    width: 3%;
-    position: absolute;
-}
-#back:hover {
- border: none;
-
- background: orange;
- box-shadow: 0px 0px 1px #777;
-}
-</style>
 <body>
+<button id="back" style = "display: block; width: 3%; position: absolute;" >↺</button>
+<?php
+
+require_once "messages.php";
+messages();
+
+require_once 'src/repository/ProjectRepository.php';
+$projectRepository = new ProjectRepository($_COOKIE['username']);
+$wcr= $projectRepository ->getAllUserProjects($_COOKIE['username']);
+?>
 <form action ="main">
-<button id="back" >↺</button>
+    <button id="back" style = "display: block; width: 3%; position: absolute;" >↺</button>
 </form>
 
-    <div class="container">
-        <div class="logo">
-            <img src="public/img/artist.svg">
-        </div>
-        <div class="new-project-container">
-            <form class="new project">
-                <input name="project name" type="text" placeholder="Cat portrait">
-                <input name="project description" type="text" placeholder="Portrait of client's cat in watercolor">
-                <input name="client name" type="text" placeholder="Lindsay Smith">
-                <input name="client email" type="email" placeholder="lindsaysmith@gmail.com">
-                <label for="deadline"></label>Change project deadline<br/></label>
-                <input type="datetime-local" id="meeting-time"
-                       name="meeting-time" value="2021-06-12T19:30"
-                       min="2020-06-07T00:00" max="2023-06-14T00:00">
-                <button>SUBMIT</button>
-                
-            </form>
-        </div>
+<div class="container">
+    <div class="logo">
+        <img src="public/img/planting a tree.svg">
     </div>
+    <div class="login-container">
+        <form action = "editProject" method = "post">
+            <div id="demoFont"></div>
+            <div class="select">
+                <select id="project" name="project">
+                    <option value="Which project do you want to edit?">Which project do you want to edit?</option>
+                    <?php
+                    asort($wcr);
+                    reset($wcr);
+                    foreach($wcr as $p => $w):
+                        echo '<option value="'.$w.'">'.$w.'</option>';
+                    endforeach;
+
+                    ?>
+                </select>
+                <button type = "submit">EDIT PROJECT</button>
+
+        </form>
+    </div>
+</div>
 </body>

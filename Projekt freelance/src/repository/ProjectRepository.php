@@ -117,7 +117,6 @@ WHERE projects.user_id = :user_id;
             $entry->getEntryLength(),
             $entry->getEntryDescription()
         ]);}
-
     public function getProjectId(string $projectName): int {
 
         $stmt = $this->database->connect()->prepare('
@@ -134,4 +133,37 @@ WHERE projecttitle = :projectTitle;
         return $project_id;
 
     }
-}
+    public function deleteProject(string $projectName){
+        $stmt = $this->database->connect()->prepare('
+        DELETE FROM projects WHERE projecttitle = :projecttitle
+               ');
+        $stmt->bindParam(':projecttitle', $projectName, PDO::PARAM_STR);
+        $stmt->execute();
+
+    }
+    public function getProjectInfo(int $projects_id)
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.projects WHERE projects_id = :projects_id
+        ');
+        $stmt->bindParam(':projects_id', $projects_id, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $project = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($project == false) {
+            return null;
+        }
+
+        return new Project(
+            $project['projecttitle'],
+            $project['projectdescription'],
+            $project['projectstartdate'],
+            $project['projectdeadline'],
+
+        );
+        }
+    public function saveEditChanges(int $projects_id, string $projectTitle, string $projectdescription, string $projectdeadline){
+
+    }
+    }

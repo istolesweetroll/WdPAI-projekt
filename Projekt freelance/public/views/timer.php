@@ -1,64 +1,35 @@
 <!doctype html>
-<title>Countdown</title>
+<title>FREELANCE</title>
 <link rel="stylesheet" type="text/css" href="public/css/style2.css">
-<style>
 
-    html, body {
-        height: 100%;
-        background-image: url('../img/BananaLeaf_Preview_01_fx.png');
-        margin: 0;
-        padding: 0;
-    }
-    body {
-        background: transparent linear-gradient(180deg, #A2B198 0%, #A2B198 100%) 0% 0% no-repeat padding-box;
-        background-image: url('public/img/come-back-later.svg');
-        color: #fff;
-        font: 18px Cousine, Menlo, Monaco, monospace;
-    }
-    #timer {
-        position: fixed;
+
+<body style = "background-color: rgba(162,177,152,1);
+        color:blanchedalmond;">
+<?php
+require_once "messages.php";
+messages();
+?>
+
+<input type="hidden" name="timeTotal" >
+<div id="timer" style = "        position: fixed;
         top: 0; right: 0; bottom: 0; left: 0;
         text-align: center;
         line-height: 90vh;
         font-size: 240px;
-    }
-    #control {
-        position: fixed;
+"onclick="toggleControls()"></div>
+
+<div id="control" style=" position: fixed;
         top: 30px; left: 30px;
         opacity: 1;
         transition: 0.1s opacity;
-    }
-
-    button {
-        background: transparent linear-gradient(180deg,#829b71 0%, #829b71 100%) 0% 0% no-repeat padding-box;
-
-        border-radius: 19px;
-       border: none;
-        color: white;
-        line-height: 2.5em;
-    }
-    #back {
-    display: block;
-    width: 3%;
-    position: absolute;
-}
-#back:hover {
- border: none;
-
- background: orange;
- box-shadow: 0px 0px 1px #777;
-}
-</style>
-
-<body>
-<input type="hidden" name="timeTotal" >;
-<div id="timer" onclick="toggleControls()"></div>
-
-<div id="control">
+ ">
 
     <button onclick="setTimer()">Set timer</button>
     <button onclick="resetTimer()">Reset</button>
-    <a href="saveEntry"><button onclick="save()">Save entry</button></a>
+    <form action = "saveEntry">
+        <button onclick="save()">Save entry</button>
+    </form>
+
 </div>
 <script>
 
@@ -99,15 +70,12 @@
     }
 
     setInterval(update, 200)
-
 </script>
-
-
 <?php
 setcookie("projectName",$_GET["project"], time()+3600);  /* expire in 1 hour */
 setcookie("projectDescription",$_GET["description"] , time()+3600);  /* expire in 1 hour */
 ?>
 <form action ="main">
-<button id="back" >↺</button>
+
 </form>
 </body>

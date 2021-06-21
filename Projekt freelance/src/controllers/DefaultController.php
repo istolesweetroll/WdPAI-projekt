@@ -73,8 +73,21 @@ class DefaultController extends AppController {
     {
         $this->render('timer');
     }
+
     public function manageprojects()
     {
         $this->render('manage projects');
+    }
+    public function about()
+    {
+        $this->render('about');
+    }
+    public function admin()
+    {
+        $this->render('admin');
+    }
+    public function feedback()
+    {
+        $this->render('feedback');
     }
 }

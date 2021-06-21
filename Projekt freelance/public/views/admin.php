@@ -15,10 +15,10 @@
                 <?php
                 require_once "messages.php";
                 messages();
-
                 ?>
             </div>
 
+            <button>+</button>
                 <form action="newentry">
                 <button>NEW ENTRY</button>
                 </form>
@@ -31,7 +31,7 @@
             <form action="accountsettings">
                 <button>ACCOUNT SETTINGS</button>
             </form>
-<form action = "feedback">
+        <form action = "feedback">
                 <button>SEND FEEDBACK</button>
             </form>
 
